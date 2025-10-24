@@ -72,7 +72,7 @@ public class MascotaService implements IMascotaService{
     public DTODueno_Mascota getMascotaDueno(Long id) {
         
         Dueno dueno = this.duenoRepo.findById(id).orElse(null);
-        Mascota masco = this.mascoRepo.findById(dueno.getId()-1).orElse(null);
+        Mascota masco = this.mascoRepo.findById(dueno.getUnaMascota().getId()).orElse(null);
 
         DTODueno_Mascota dtoDueno_Mascota = new DTODueno_Mascota();
         dtoDueno_Mascota.setNombre_mascota(masco.getNombre());
