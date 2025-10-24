@@ -5,7 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.clinica_veterinaria.clinica_veterinaria.models.Dueno;
 
+
 @Repository
 public interface IDuenoRepository extends JpaRepository<Dueno,Long> {
 
+        public Dueno findByUnaMascota_Id(Long mascotaId);
 }

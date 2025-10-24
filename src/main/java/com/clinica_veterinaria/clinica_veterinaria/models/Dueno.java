@@ -23,9 +23,9 @@ public class Dueno {
     private String apellido;
     private String telefono;
 
-    @OneToOne
-    @JoinColumn(name = "mascota_id",referencedColumnName = "id")
-    private Mascota una_mascota;
+    @OneToOne(optional = true)
+    @JoinColumn(name = "mascota_id",referencedColumnName = "id",nullable = true)
+    private Mascota unaMascota;
 
 
 }
