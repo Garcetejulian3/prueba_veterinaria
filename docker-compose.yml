@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  clinica_veterinaria:
+    build: ./clinica_veterinaria
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./clinica_veterinaria/.env
+    restart: always
